@@ -1,9 +1,11 @@
 {
+  "git": {
+    "commitMessage": "chore: release v${version}"
+  },
   "github": {
-    "release": false
+    "release": true
   },
   "npm": {
-    "publishArgs": "--registry=https://registry.npmjs.org",
-    "skipChecks": true
+    "publish": false
   }
 }
