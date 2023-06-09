@@ -16,8 +16,8 @@ const browsers = [
 ]
 
 const plugins = [
-  ['@babel/plugin-proposal-class-properties', { loose: true }],
-  ['@babel/plugin-proposal-optional-chaining', { loose: true }],
+  ['@babel/plugin-proposal-class-properties', { loose: false }],
+  ['@babel/plugin-proposal-optional-chaining', { loose: false }],
   '@babel/plugin-proposal-export-default-from',
   '@babel/plugin-proposal-export-namespace-from',
   '@babel/plugin-syntax-dynamic-import',
@@ -72,7 +72,7 @@ module.exports = () => ({
       '@babel/env',
       {
         modules: isESBuild || isUMDBuild ? false : 'commonjs',
-        loose: true,
+        loose: false,
         targets: { browsers },
       },
     ],
